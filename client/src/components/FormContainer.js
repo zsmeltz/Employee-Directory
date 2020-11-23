@@ -21,6 +21,8 @@ class FormContainer extends Component {
   //the searchEmps function takes in the search state's input and compares it to the data in employees by a filter taking in just one object of employee data
   //then comparing it with includes, returning it, them setting the state of employees to this new compared object of data that matches your search.
   searchEmps = search => {
+
+
     const newEmployees = employees.filter(employee => {
 
       if (employee.name.first.includes(search) || employee.name.last.includes(search)) {
