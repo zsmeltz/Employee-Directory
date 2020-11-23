@@ -2,7 +2,7 @@
  
 
 ## Description: 
-This application searches through a an array of employee data and directs you to what you had in the  search input. This app uses React.  
+This application searches through an array of employee data and directs you to your search input.The data then displays on the page with a photo and information on the employees. This app uses React.  
 
 ### Table of Contents: 
 1.[Installation Instructions](#instalation-instructions) 
