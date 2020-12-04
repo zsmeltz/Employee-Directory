@@ -22,13 +22,23 @@ class FormContainer extends Component {
   //then comparing it with includes, returning it, them setting the state of employees to this new compared object of data that matches your search.
   searchEmps = search => {
 
+    if (search === ''){
+      this.setState({employees: []})
+    }
 
     const newEmployees = employees.filter(employee => {
 
       if (employee.name.first.includes(search) || employee.name.last.includes(search)) {
-        return employees;
-      };
-
+        return employee;
+      }
+      if(employee.name.first !== search && employee.name.last !== search){
+        this.setState({employees: ['']})
+      }
+      if (search === ''){
+        this.setState({employees: []})
+      }
+     
+      
     });
 
     this.setState({ employees: newEmployees });
@@ -38,11 +48,12 @@ class FormContainer extends Component {
 
 
   handleInputChange = event => {
-    const name = event.target.name;
-    const value = event.target.value;
+     const value = event.target.value;
     this.setState({
-      [name]: value
+      search: value
     });
+    this.searchEmps(this.state.search)
+    
   };
 
   //This sends the submitted input from the form to a call on searchEmps 

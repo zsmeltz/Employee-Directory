@@ -5,8 +5,10 @@ import React from "react";
 function Form(props) {
   return (
     <form>
-      <div className="form-group">
-        <label htmlFor="search">Search:</label>
+      <div className="form-group" style={{margin: 15}}>
+        <h3 style={{textAlign: 'left'}}>Employee Search</h3>
+        <br/>
+        <label htmlFor="search">Employee:</label>
         <input
           onChange={props.handleInputChange}
           value={props.search}

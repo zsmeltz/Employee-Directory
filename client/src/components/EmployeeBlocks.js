@@ -5,13 +5,14 @@ function EmpBlocks(props) {
     <ul className="list-group" >
       {props.employees.map(employee => (
         <li className="list-group-item" key={employee} style={{backgroundColor: "#a6a6a6"}}>
-          <div className="card">
+          <div className="card" style={{width: '70%', marginLeft: '15%'}}>
             <h5 className="card-header" >{employee.name.first} {employee.name.last}</h5>
-            <div className="card-body">
-              <img src={employee.picture.large} alt="Oh no, there is no img!" />
+            <div className="card-body" >
+            <img src={employee.picture.large} alt="Oh no, there is no img!" align="left"/>
               <h5 className="card-text" style={{ textAlign: 'right' }}>Email:  {employee.email}</h5>
               <h4 className="card-text" style={{ textAlign: 'right' }}>Phone #: {employee.cell}</h4>
               <h5 className="card-text" style={{ textAlign: 'right' }}>Work ID:  {employee.id.value}</h5>
+              
             </div>
           </div>
         </li>
